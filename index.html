@@ -73,7 +73,7 @@
 
   /* Hero */
   .hero{padding:24px 0 64px;}
-  .hero-grid{display:grid; grid-template-columns:1fr; align-items:center;}
+  .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
   .hero h1{font-size:44px; font-weight:700; line-height:1.15; margin:0 0 20px; color:#000;}
   .hero p{font-size:17px; color:var(--text-body); margin:0 0 28px; max-width:44ch;}
   .btn-arrow{display:inline-flex; align-items:stretch; cursor:pointer; border:0; font-family:inherit;}
@@ -106,7 +106,7 @@
   footer .footer-bottom{border-top:1px solid rgba(255,255,255,0.15); padding-top:20px; font-size:13px; color:#9FB6C6;}
 
   @media (max-width: 860px){
-    .endowment-grid, .footer-grid{grid-template-columns:1fr;}
+    .hero-grid, .endowment-grid, .footer-grid{grid-template-columns:1fr;}
     nav.primary-nav{display:none;}
     .utility-bar .wrap{justify-content:center; flex-wrap:wrap; height:auto; padding:10px 0;}
   }
@@ -146,14 +146,19 @@
 </div>
 
 <section class="hero" style="padding-top:0;">
-  <div class="wrap hero-grid">
-    <div>
-      <div style="margin-bottom:32px;">
-        <a href="#XWKAEJPJ" style="display: none"></a>
+  <div class="wrap">
+    <h1 style="text-align:center; margin-bottom:32px;">Stand Together for Science Challenge</h1>
+    <div style="margin-bottom:48px;">
+      <a href="#XWKAEJPJ" style="display: none"></a>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <p>Your contribution powers the Stand Together for Science Challenge—strengthening our collective voice to champion scientific discovery, protect vital research, and build a welcoming, collaborative future for scientists, students, policymakers, and the public.</p>
+        <a href="#XLPLBQSV" style="display: none"></a>
       </div>
-      <h1>Stand Together for Science Challenge</h1>
-      <p>Your contribution powers the Stand Together for Science Challenge—strengthening our collective voice to champion scientific discovery, protect vital research, and build a welcoming, collaborative future for scientists, students, policymakers, and the public.</p>
-      <a href="#XLPLBQSV" style="display: none"></a>
+      <div>
+        <video src="https://cdn.sanity.io/files/i2z87pbo/production/ec3d90597c08068b610c9d06b262856d1f943ed4.mp4" controls playsinline style="width:100%; height:auto; display:block; background:#000;"></video>
+      </div>
     </div>
   </div>
 </section>
