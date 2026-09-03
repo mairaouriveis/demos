@@ -79,6 +79,9 @@
   .btn-arrow{display:inline-flex; align-items:stretch; cursor:pointer; border:0; font-family:inherit;}
   .btn-arrow .label{background:var(--aps-blue-500); color:#fff; padding:16px 22px; font-size:16px; font-weight:600;}
   .btn-arrow .icon{background:var(--aps-blue-600); color:#fff; padding:16px 20px; display:flex; align-items:center;}
+  .stage-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; margin-top:48px;}
+  .stage-card{text-align:center;}
+  .stage-card h3{color:var(--text-heading); font-size:20px; font-weight:600; margin:0 0 16px;}
   section{padding:64px 0;}
   section.soft{background:var(--bg-soft);}
   h2{font-size:32px; font-weight:600; color:var(--text-heading); margin:0 0 16px;}
@@ -106,7 +109,7 @@
   footer .footer-bottom{border-top:1px solid rgba(255,255,255,0.15); padding-top:20px; font-size:13px; color:#9FB6C6;}
 
   @media (max-width: 860px){
-    .hero-grid, .endowment-grid, .footer-grid{grid-template-columns:1fr;}
+    .hero-grid, .endowment-grid, .footer-grid, .stage-grid{grid-template-columns:1fr;}
     nav.primary-nav{display:none;}
     .utility-bar .wrap{justify-content:center; flex-wrap:wrap; height:auto; padding:10px 0;}
   }
@@ -160,6 +163,17 @@
       <div>
         <video src="https://cdn.sanity.io/files/i2z87pbo/production/ec3d90597c08068b610c9d06b262856d1f943ed4.mp4" controls playsinline style="width:100%; height:auto; display:block; background:#000;"></video>
       </div>
+    </div>
+    <div class="stage-grid">
+      <div class="stage-card">
+        <h3>Challenge Stage #1</h3>
+        <div style="margin-bottom:16px;">
+          <a href="#XCVXQTNK" style="display: none"></a>
+        </div>
+        <a href="#XDAYAFKB" style="display: none"></a>
+      </div>
+      <div class="stage-card"></div>
+      <div class="stage-card"></div>
     </div>
   </div>
 </section>
