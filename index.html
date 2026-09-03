@@ -73,29 +73,18 @@
 
   /* Hero */
   .hero{padding:24px 0 64px;}
-  .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .hero-grid{display:grid; grid-template-columns:1fr; align-items:center;}
+  .hero-grid > div{max-width:640px;}
   .hero h1{font-size:44px; font-weight:700; line-height:1.15; margin:0 0 20px; color:#000;}
   .hero p{font-size:17px; color:var(--text-body); margin:0 0 28px; max-width:44ch;}
   .btn-arrow{display:inline-flex; align-items:stretch; cursor:pointer; border:0; font-family:inherit;}
   .btn-arrow .label{background:var(--aps-blue-500); color:#fff; padding:16px 22px; font-size:16px; font-weight:600;}
   .btn-arrow .icon{background:var(--aps-blue-600); color:#fff; padding:16px 20px; display:flex; align-items:center;}
-  .hero-figure{position:relative;}
-  .hero-figure img{width:100%; height:420px; object-fit:cover;}
-  .hero-figure figcaption{font-size:12px; color:var(--text-body); margin-top:8px;}
-
   section{padding:64px 0;}
   section.soft{background:var(--bg-soft);}
   h2{font-size:32px; font-weight:600; color:var(--text-heading); margin:0 0 16px;}
   .section-intro{max-width:75ch; color:var(--text-body); font-size:16px; margin-bottom:40px;}
   .section-intro strong{color:#000;}
-
-  .card-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:32px;}
-  .card-grid.cols-4{grid-template-columns:repeat(4, 1fr);}
-  .card{border:1px solid var(--border); padding:28px; background:#fff;}
-  .card h3{font-size:20px; font-weight:600; margin:0 0 12px; color:var(--text-heading);}
-  .card p{font-size:15px; color:var(--text-body); margin:0 0 18px;}
-  .card a.cta{color:var(--aps-blue-500); font-weight:600; font-size:15px;}
-  .card a.cta:after{content:" →"; }
 
   .endowment-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:32px;}
   .endowment-card{background:var(--aps-navy); color:#fff; padding:36px;}
@@ -118,7 +107,7 @@
   footer .footer-bottom{border-top:1px solid rgba(255,255,255,0.15); padding-top:20px; font-size:13px; color:#9FB6C6;}
 
   @media (max-width: 860px){
-    .hero-grid, .card-grid, .card-grid.cols-4, .endowment-grid, .footer-grid{grid-template-columns:1fr;}
+    .endowment-grid, .footer-grid{grid-template-columns:1fr;}
     nav.primary-nav{display:none;}
     .utility-bar .wrap{justify-content:center; flex-wrap:wrap; height:auto; padding:10px 0;}
   }
@@ -160,15 +149,13 @@
 <section class="hero" style="padding-top:0;">
   <div class="wrap hero-grid">
     <div>
-      <a href="#XWKAEJPJ" style="display: none"></a>
+      <div style="margin-bottom:32px;">
+        <a href="#XWKAEJPJ" style="display: none"></a>
+      </div>
       <h1>Support the American Physical Society</h1>
       <p>Your gifts help APS grow and maintain a vibrant, welcoming physics community that makes a real difference for researchers, students, teachers, and the wider public.</p>
       <a href="#XLPLBQSV" style="display: none"></a>
     </div>
-    <figure class="hero-figure">
-      <img src="https://www.aps.org/api/image-proxy/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9pMno4N3Biby9wcm9kdWN0aW9uLzcyMDlhYjBhZDIwNjQ0NzA1ZWY2OGUyODAzOGQ0N2JjMmM2ZTBkYTAtOTAweDUwMC53ZWJwP2F1dG89Zm9ybWF0JmZpdD1tYXgmdz0xMjAwJnE9OTA" alt="Enrique Segura Carrillo, a mentee in the IMPact mentoring program">
-      <figcaption>Enrique Segura Carrillo, an IMPact mentoring program participant, receives support made possible by donors like you.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -195,10 +182,10 @@
   <div class="wrap" style="max-width:700px;">
     <p>Your gift helps sustain a strong, inclusive physics community — supporting researchers, students, educators, and the public.</p>
     <p class="fine">Federal tax ID: 13-1656610 · APS Development Office, One Physics Ellipse, College Park, MD 20740</p>
-    <button class="btn-arrow" onclick="FundraiseUp('openCheckout')">
+    <a class="btn-arrow" href="https://dashboard.fundraiseup.com/ABPNEHGY/elements?widget=FUNUKHNLXJW" target="_blank" rel="noopener">
       <span class="label">Donate to APS today</span>
       <span class="icon">&#8594;</span>
-    </button>
+    </a>
   </div>
 </section>
 
