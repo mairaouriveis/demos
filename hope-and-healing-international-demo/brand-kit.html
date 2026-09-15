@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hope and Healing International — Brand Kit</title>
+<style>
+  :root {
+    --purple: #592C82;
+    --purple-light: #9F86B7;
+    --green: #58BA49;
+    --bg: #FAF8FC;
+    --card-bg: #FFFFFF;
+    --border: #E4DDEE;
+    --text: #2A2230;
+    --text-muted: #6B6275;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 24px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 4px;
+    color: var(--purple);
+  }
+  .subtitle { color: var(--text-muted); margin: 0 0 32px; font-size: 15px; }
+  h2 {
+    font-size: 20px;
+    color: var(--purple);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+    margin: 48px 0 20px;
+  }
+  .guide {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+  }
+  .guide h3 { font-size: 15px; color: var(--purple); margin: 18px 0 6px; }
+  .guide h3:first-child { margin-top: 0; }
+  .guide p, .guide li { font-size: 14px; color: var(--text); }
+  .guide ol { margin: 6px 0 0; padding-left: 20px; }
+  .reminder {
+    margin-top: 18px;
+    padding: 10px 14px;
+    background: #FFF7E6;
+    border: 1px solid #F0DDA8;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #7A5A00;
+  }
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 800px) {
+    .cta-grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img { width: 100%; display: block; aspect-ratio: 1248/702; object-fit: cover; }
+  .card-body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .option-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--green);
+    text-transform: uppercase;
+  }
+  .field-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .field-box {
+    background: #F6F2FA;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13.5px;
+  }
+  .field-box.title { font-weight: 600; }
+  .copy-btn {
+    border: 1px solid var(--purple-light);
+    background: #fff;
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .copy-btn:hover { background: var(--purple); color: #fff; }
+  .copy-btn.copied { background: var(--green); color: #fff; border-color: var(--green); }
+  .email-block {
+    margin-top: 4px;
+    border-top: 1px dashed var(--border);
+    padding-top: 14px;
+  }
+  .email-part { margin-bottom: 10px; }
+  .email-part:last-child { margin-bottom: 0; }
+  .note {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 6px;
+  }
+  .swatches { display: flex; gap: 16px; flex-wrap: wrap; }
+  .swatch {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    width: 160px;
+    text-align: center;
+  }
+  .swatch-color {
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .swatch-name { font-size: 12px; font-weight: 700; margin-bottom: 2px; }
+  .swatch-hex { font-size: 12px; color: var(--text-muted); font-family: ui-monospace, monospace; }
+  .org-table {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+  }
+  .org-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 12px;
+  }
+  .org-row:last-child { border-bottom: none; }
+  .org-row-label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; min-width: 140px; }
+  .org-row-value { font-size: 14px; flex: 1; }
+  .verify-note { font-size: 12px; color: var(--text-muted); margin: 0 0 12px; }
+  .logo-row { display: flex; align-items: center; gap: 24px; margin-bottom: 16px; }
+  .logo-row img.checker {
+    width: 120px; height: 120px;
+    background-image:
+      linear-gradient(45deg, #ddd 25%, transparent 25%),
+      linear-gradient(-45deg, #ddd 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #ddd 75%),
+      linear-gradient(-45deg, transparent 75%, #ddd 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    object-fit: contain;
+  }
+  .spares { display: flex; gap: 16px; flex-wrap: wrap; }
+  .spare-thumb {
+    width: 140px; height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Hope and Healing International</h1>
+  <p class="subtitle">Fundraise Up demo brand kit — org code ABPNEHGY</p>
+
+  <div class="guide">
+    <h3>Purpose</h3>
+    <p>Ready-made images and copy so you can build a Fundraise Up campaign fast. Every image here is also saved in <code>assets/</code> for upload to the dashboard.</p>
+
+    <h3>What's inside</h3>
+    <p>The logo, three campaign images (each with matching message copy), a thank-you email for each campaign, brand colors, organization info, and spare images.</p>
+
+    <h3>Sizing</h3>
+    <p>Campaign images fit a campaign modal or a full campaign page. The logo and spare images suit the donor portal. Everything is pre-sized — no cropping needed.</p>
+
+    <h3>Steps</h3>
+    <ol>
+      <li>Log into your demo account's admin dashboard.</li>
+      <li>Find your campaign, or create one.</li>
+      <li>Pick one CTA option (image + title + message) and use it for both the campaign modal/page and its matching thank-you email — keep the same image throughout.</li>
+      <li>Apply the brand colors to the Donate Button element and email customization (and any other elements).</li>
+      <li>Use the logo, spare images, and org info for the donor portal and receipts.</li>
+    </ol>
+
+    <div class="reminder">This demo stays in test mode — no real transactions are ever processed.</div>
+  </div>
+
+  <h2>Campaign Options</h2>
+  <div class="cta-grid">
+
+    <div class="card">
+      <img src="assets/cta-1-1248x702.jpg" alt="Emergency care campaign image">
+      <div class="card-body">
+        <div class="option-label">Option A — Emergency</div>
+
+        <div>
+          <div class="field-label">Title <button class="copy-btn" data-copy="Emergency Hope for Forgotten Children">Copy</button></div>
+          <div class="field-box title">Emergency Hope for Forgotten Children</div>
+        </div>
+
+        <div>
+          <div class="field-label">Message <button class="copy-btn" data-copy="Right now, children with disabilities in the world's poorest communities are sick, lonely, and at risk of being forgotten. Hope and Healing International steps in with emergency medical care, safe shelter, and loving support for kids who have nowhere else to turn. We believe every child is loved and valued by God, and that no child should be forgotten. Your gift meets urgent needs fast, giving a frightened child hope, healing, and a chance to smile again.">Copy</button></div>
+          <div class="field-box">Right now, children with disabilities in the world's poorest communities are sick, lonely, and at risk of being forgotten. Hope and Healing International steps in with emergency medical care, safe shelter, and loving support for kids who have nowhere else to turn. We believe every child is loved and valued by God, and that no child should be forgotten. Your gift meets urgent needs fast, giving a frightened child hope, healing, and a chance to smile again.</div>
+        </div>
+
+        <div class="email-block">
+          <div class="field-label" style="margin-bottom:8px;">Thank-you Email</div>
+
+          <div class="email-part">
+            <div class="field-label">Subject <button class="copy-btn" data-copy="Thank you for your gift!">Copy</button></div>
+            <div class="field-box">Thank you for your gift!</div>
+            <div class="note">Recurring gift → "Thank you for your recurring support!"</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Content Title <button class="copy-btn" data-copy="You Just Brought Emergency Hope">Copy</button></div>
+            <div class="field-box">You Just Brought Emergency Hope</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Image</div>
+            <div class="field-box">USE CAMPAIGN IMAGE</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Content Text <button class="copy-btn" data-copy="Hi {Supporter First Name – add tag},
+
+Because of you, a child facing a medical emergency doesn't have to face it alone. Your generosity helps provide urgent care, safe shelter, and loving support for children with disabilities in some of the world's poorest communities — children who are so often overlooked, but never forgotten by you.
+
+We believe every child is loved and valued by God, and your gift is proof of that love in action. You are part of a global family of donors who refuse to let any child be forgotten. Thank you for stepping in when it matters most.
+
+With gratitude,
+The Hope and Healing family">Copy</button></div>
+            <div class="field-box">Hi {Supporter First Name – add tag},<br><br>Because of you, a child facing a medical emergency doesn't have to face it alone. Your generosity helps provide urgent care, safe shelter, and loving support for children with disabilities in some of the world's poorest communities — children who are so often overlooked, but never forgotten by you.<br><br>We believe every child is loved and valued by God, and your gift is proof of that love in action. You are part of a global family of donors who refuse to let any child be forgotten. Thank you for stepping in when it matters most.<br><br>With gratitude,<br>The Hope and Healing family</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/cta-2-1248x702.jpg" alt="Hope campaign image">
+      <div class="card-body">
+        <div class="option-label">Option B — Hope</div>
+
+        <div>
+          <div class="field-label">Title <button class="copy-btn" data-copy="Hope for Every Child's Health">Copy</button></div>
+          <div class="field-box title">Hope for Every Child's Health</div>
+        </div>
+
+        <div>
+          <div class="field-label">Message <button class="copy-btn" data-copy="We care deeply that children with disabilities in the world's poorest communities live healthier, happier, longer lives. Too many of these kids are sick, lonely, or abused, with no one to turn to for care. Hope and Healing International walks alongside families, providing medical treatment, nutrition, and compassionate support so every child can thrive. We believe each child is loved and valued by God, and your gift brings that hope to life.">Copy</button></div>
+          <div class="field-box">We care deeply that children with disabilities in the world's poorest communities live healthier, happier, longer lives. Too many of these kids are sick, lonely, or abused, with no one to turn to for care. Hope and Healing International walks alongside families, providing medical treatment, nutrition, and compassionate support so every child can thrive. We believe each child is loved and valued by God, and your gift brings that hope to life.</div>
+        </div>
+
+        <div class="email-block">
+          <div class="field-label" style="margin-bottom:8px;">Thank-you Email</div>
+
+          <div class="email-part">
+            <div class="field-label">Subject <button class="copy-btn" data-copy="Thank you for your gift!">Copy</button></div>
+            <div class="field-box">Thank you for your gift!</div>
+            <div class="note">Recurring gift → "Thank you for your recurring support!"</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Content Title <button class="copy-btn" data-copy="Hope Is Growing Because of You">Copy</button></div>
+            <div class="field-box">Hope Is Growing Because of You</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Image</div>
+            <div class="field-box">USE CAMPAIGN IMAGE</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Content Text <button class="copy-btn" data-copy="Hi {Supporter First Name – add tag},
+
+We care deeply that children with disabilities in the world's poorest communities live healthier, happier, longer lives — and because of your generosity, that care reaches further. Your gift helps provide medical treatment, nutrition, and compassionate support to kids who might otherwise go without, walking alongside their families every step of the way.
+
+We believe each child is loved and valued by God, and today, because of you, one more child is a little less alone and a little more hopeful.
+
+Thank you for being part of their story.
+
+With gratitude,
+The Hope and Healing family">Copy</button></div>
+            <div class="field-box">Hi {Supporter First Name – add tag},<br><br>We care deeply that children with disabilities in the world's poorest communities live healthier, happier, longer lives — and because of your generosity, that care reaches further. Your gift helps provide medical treatment, nutrition, and compassionate support to kids who might otherwise go without, walking alongside their families every step of the way.<br><br>We believe each child is loved and valued by God, and today, because of you, one more child is a little less alone and a little more hopeful.<br><br>Thank you for being part of their story.<br><br>With gratitude,<br>The Hope and Healing family</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/cta-3-1248x702.jpg" alt="Miracles campaign image">
+      <div class="card-body">
+        <div class="option-label">Option C — Miracles</div>
+
+        <div>
+          <div class="field-label">Title <button class="copy-btn" data-copy="Miracles of Healing for One Child">Copy</button></div>
+          <div class="field-box title">Miracles of Healing for One Child</div>
+        </div>
+
+        <div>
+          <div class="field-label">Message <button class="copy-btn" data-copy="For a child in pain, a single act of care can feel like a miracle. Hope and Healing International provides surgeries, treatment, and medical support that restore health and hope to children with disabilities who would otherwise go without. We believe following Jesus means caring for forgotten children, and that every one of them is loved and valued by God. Your gift makes moments like this possible — a bandage removed, a smile returned, a life transformed.">Copy</button></div>
+          <div class="field-box">For a child in pain, a single act of care can feel like a miracle. Hope and Healing International provides surgeries, treatment, and medical support that restore health and hope to children with disabilities who would otherwise go without. We believe following Jesus means caring for forgotten children, and that every one of them is loved and valued by God. Your gift makes moments like this possible — a bandage removed, a smile returned, a life transformed.</div>
+        </div>
+
+        <div class="email-block">
+          <div class="field-label" style="margin-bottom:8px;">Thank-you Email</div>
+
+          <div class="email-part">
+            <div class="field-label">Subject <button class="copy-btn" data-copy="Thank you for your gift!">Copy</button></div>
+            <div class="field-box">Thank you for your gift!</div>
+            <div class="note">Recurring gift → "Thank you for your recurring support!"</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Content Title <button class="copy-btn" data-copy="You Made This Miracle Possible">Copy</button></div>
+            <div class="field-box">You Made This Miracle Possible</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Image</div>
+            <div class="field-box">USE CAMPAIGN IMAGE</div>
+          </div>
+
+          <div class="email-part">
+            <div class="field-label">Content Text <button class="copy-btn" data-copy="Hi {Supporter First Name – add tag},
+
+For a child in pain, a moment of real care can feel like a miracle — and today, you made one possible. Your gift helps provide surgeries, treatment, and medical support that restore health and hope to children with disabilities who would otherwise go without, giving them a chance to heal, to play, and to smile again.
+
+We believe following Jesus means caring for forgotten children, and that every one of them is loved and valued by God. Thank you for believing that too, and for making this miracle real.
+
+With gratitude,
+The Hope and Healing family">Copy</button></div>
+            <div class="field-box">Hi {Supporter First Name – add tag},<br><br>For a child in pain, a moment of real care can feel like a miracle — and today, you made one possible. Your gift helps provide surgeries, treatment, and medical support that restore health and hope to children with disabilities who would otherwise go without, giving them a chance to heal, to play, and to smile again.<br><br>We believe following Jesus means caring for forgotten children, and that every one of them is loved and valued by God. Thank you for believing that too, and for making this miracle real.<br><br>With gratitude,<br>The Hope and Healing family</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Logo</h2>
+  <div class="logo-row">
+    <img class="checker" src="assets/logo-200x200.png" alt="Hope and Healing International logo">
+    <p style="font-size:13px; color:var(--text-muted); max-width:420px;">200×200, ready for the donor portal. Shown on a checkerboard so transparent edges stay visible.</p>
+  </div>
+
+  <h2>Brand Colors</h2>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#592C82;"></div>
+      <div class="swatch-name">Primary Purple</div>
+      <div class="swatch-hex">#592C82 <button class="copy-btn" data-copy="#592C82">Copy</button></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#58BA49;"></div>
+      <div class="swatch-name">Accent Green (logo)</div>
+      <div class="swatch-hex">#58BA49 <button class="copy-btn" data-copy="#58BA49">Copy</button></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#9F86B7;"></div>
+      <div class="swatch-name">Light Purple (logo)</div>
+      <div class="swatch-hex">#9F86B7 <button class="copy-btn" data-copy="#9F86B7">Copy</button></div>
+    </div>
+  </div>
+
+  <h2>Organization Info</h2>
+  <p class="verify-note">Auto-detected from the site — verify before use.</p>
+  <div class="org-table">
+    <div class="org-row">
+      <div class="org-row-label">Name</div>
+      <div class="org-row-value">Hope and Healing International</div>
+      <button class="copy-btn" data-copy="Hope and Healing International">Copy</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var text = btn.getAttribute('data-copy');
+    navigator.clipboard.writeText(text).then(function() {
+      var original = btn.textContent;
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1500);
+    });
+  });
+});
+</script>
+</body>
+</html>
