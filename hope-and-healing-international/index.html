@@ -108,12 +108,19 @@
 
   /* Hero */
   .hero{
-    position:relative;
-    background:
-      linear-gradient(105deg, rgba(89,44,130,.94) 0%, rgba(89,44,130,.88) 32%, rgba(89,44,130,.35) 58%, rgba(89,44,130,0) 72%),
-      url('https://cdn-lhdkp.nitrocdn.com/opfvprOjiYYWWutlXEpGFwqmSHgkxShE/assets/images/optimized/rev-b079de0/www.hopeandhealing.org/wp-content/uploads/2026/07/SG-SEP-Christmas-Catalogue-Home-Page-Banner-RS149173-Mobile-390x290@2x.webp') right center/cover no-repeat;
-    min-height:560px;display:flex;align-items:center;
+    position:relative;display:flex;min-height:560px;background:var(--purple);overflow:hidden;
   }
+  .hero-text-panel{
+    position:relative;z-index:2;flex:0 0 auto;width:min(50%, 620px);
+    display:flex;align-items:center;padding:60px 5vw 60px 32px;
+    background:var(--purple);
+  }
+  .hero-text-panel::after{
+    content:"";position:absolute;top:0;right:-80px;bottom:0;width:80px;
+    background:linear-gradient(to right, var(--purple), rgba(89,44,130,0));
+  }
+  .hero-image-panel{position:relative;flex:1 1 auto;min-width:0;}
+  .hero-image-panel img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;}
   .hero-inner{max-width:1180px;margin:0 auto;padding:60px 32px;width:100%;}
   .hero-content{max-width:520px;}
   .hero h1{color:var(--white);font-size:76px;line-height:1;margin-bottom:18px;}
@@ -182,7 +189,11 @@
   .social-icons svg{width:20px;height:20px;fill:var(--white);}
 
   @media(max-width:860px){
-    .hero{background-position:center center;}
+    .hero{flex-direction:column;min-height:0;}
+    .hero-text-panel{width:100%;padding:44px 24px 32px;}
+    .hero-text-panel::after{display:none;}
+    .hero-image-panel{height:320px;}
+    .hero-image-panel img{object-position:50% 15%;}
     .hero h1{font-size:52px;}
     .hero .hero-sub{font-size:22px;}
     .feature, .faith-grid, .footer-grid{grid-template-columns:1fr;}
@@ -253,12 +264,15 @@
 
 <!-- Hero -->
 <section class="hero" style="padding:0;">
-  <div class="hero-inner">
+  <div class="hero-text-panel">
     <div class="hero-content">
       <h1>Hope</h1>
       <p class="hero-sub">Give a child hope and healing this Christmas</p>
       <a href="https://hopeandhealingcatalog.demo-fru.workers.dev/" class="btn btn-white" target="_blank" rel="noopener">Shop Now</a>
     </div>
+  </div>
+  <div class="hero-image-panel">
+    <img src="https://cdn-lhdkp.nitrocdn.com/opfvprOjiYYWWutlXEpGFwqmSHgkxShE/assets/images/optimized/rev-b079de0/www.hopeandhealing.org/wp-content/uploads/2026/07/SG-SEP-Christmas-Catalogue-Home-Page-Banner-RS149173-Mobile-390x290@2x.webp" alt="Smiling child wearing an eye bandage.">
   </div>
 </section>
 
