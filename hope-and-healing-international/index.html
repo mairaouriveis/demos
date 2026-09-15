@@ -58,12 +58,20 @@
 
   /* Header */
   header.main-header{position:relative;z-index:20;background:var(--white);border-bottom:1px solid #eee;}
-  .header-row{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1180px;margin:0 auto;}
-  .logo-link{display:flex;align-items:center;gap:12px;}
+  .header-row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 32px;max-width:1180px;margin:0 auto;}
+  .logo-link{display:flex;align-items:center;gap:12px;flex-shrink:0;}
   .logo-link img{height:52px;width:auto;}
   .tagline{font-size:13px;color:var(--purple);font-style:italic;line-height:1.3;}
-  .menu-toggle{background:none;border:none;padding:6px;}
+  .menu-toggle{display:none;background:none;border:none;padding:6px;}
   .menu-toggle svg{width:28px;height:28px;stroke:var(--purple);}
+
+  /* Always-visible desktop nav */
+  .desktop-nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end;}
+  .desktop-nav .brand-link{font-size:19px;}
+  .desktop-nav .brand-link .healing{color:var(--purple);font-weight:600;}
+  .desktop-nav .brand-link .hugs{color:var(--red);font-weight:700;}
+  .desktop-nav a:not(.brand-link):not(.btn){font-size:15px;font-weight:600;color:var(--ink);white-space:nowrap;}
+  .desktop-nav a:not(.brand-link):not(.btn):hover{color:var(--purple);}
 
   /* Slide down nav panel */
   .nav-panel{
@@ -182,6 +190,8 @@
     section{padding:56px 0;}
     .center-heading h2{font-size:30px;}
     .utility-bar .container{justify-content:center;flex-wrap:wrap;gap:14px;}
+    .desktop-nav{display:none;}
+    .menu-toggle{display:block;}
   }
 </style>
 </head>
@@ -205,6 +215,17 @@
     <a href="index.html" class="logo-link">
       <img src="https://cdn-lhdkp.nitrocdn.com/opfvprOjiYYWWutlXEpGFwqmSHgkxShE/assets/images/optimized/rev-b079de0/www.hopeandhealing.org/wp-content/uploads/2023/01/logo-hhi.svg" alt="Hope and Healing International logo">
     </a>
+
+    <nav class="desktop-nav">
+      <a href="#" class="brand-link"><span class="healing">healing</span><span class="hugs">hugs</span></a>
+      <a href="#">Gift Catalogue</a>
+      <a href="#">Why Disability and Poverty</a>
+      <a href="#">Our Impact</a>
+      <a href="#">About Us</a>
+      <a href="#">Ways to give</a>
+      <a href="#XWRXRZML" style="display: none"></a>
+    </nav>
+
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
       <svg viewBox="0 0 24 24" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
@@ -224,7 +245,7 @@
         <li><a href="#">Ways to give</a></li>
       </ul>
       <div class="nav-donate">
-        <a href="#" class="btn btn-purple" onclick="FundraiseUp('openCheckout'); return false;">Donate</a>
+        <a href="#XWRXRZML" style="display: none"></a>
       </div>
     </div>
   </nav>
@@ -261,7 +282,7 @@
       <p class="subhead">A gift of $47 can give a child the miracle of sight.</p>
       <div class="btn-row">
         <a href="#" class="btn btn-outline-purple">Learn More</a>
-        <a href="#" class="btn btn-purple" onclick="FundraiseUp('openCheckout'); return false;">Donate Now</a>
+        <a href="https://testings.donorsupport.co/-/XXFYLSZF" class="btn btn-purple" target="_blank" rel="noopener">Donate Now</a>
       </div>
     </div>
   </div>
@@ -274,7 +295,7 @@
       <div class="eyebrow">Emergency</div>
       <p class="subhead">Uganda Nutrition Crisis</p>
       <div class="btn-row">
-        <a href="#" class="btn btn-red" onclick="FundraiseUp('openCheckout'); return false;">Donate Now</a>
+        <a href="https://testings.donorsupport.co/-/XDBQECQT" class="btn btn-red" target="_blank" rel="noopener">Donate Now</a>
       </div>
     </div>
     <img style="order:2;" src="https://cdn-lhdkp.nitrocdn.com/opfvprOjiYYWWutlXEpGFwqmSHgkxShE/assets/images/optimized/rev-b079de0/www.hopeandhealing.org/wp-content/uploads/2026/08/SG-AUG-Uganda-Nutrition-Emergency-600x640@2x-960x1024.webp" alt="A mother and child at a nutrition clinic.">
