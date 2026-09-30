@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HCI Brand Kit</title>
+<style>
+  :root { --red:#e32226; --ink:#1a1a1a; --muted:#666; --line:#e5e5e5; --bg:#f7f7f7; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:#111; color:#fff; padding:28px 16px; }
+  header .wrap { display:flex; align-items:center; gap:18px; }
+  header img { width:64px; height:64px; }
+  header h1 { margin:0; font-size:24px; }
+  header p { margin:2px 0 0; color:#bbb; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 16px; }
+  main .wrap { padding-top:28px; padding-bottom:60px; }
+  h2 { font-size:20px; margin:36px 0 12px; border-bottom:3px solid var(--red); display:inline-block; padding-bottom:2px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:20px; margin-bottom:22px; }
+  .guide h3 { margin:14px 0 4px; font-size:15px; }
+  .guide ol, .guide ul { margin:4px 0; padding-left:20px; }
+  .cta img { width:100%; border-radius:8px; display:block; }
+  .tag { display:inline-block; background:var(--red); color:#fff; font-weight:700; font-size:12px; letter-spacing:.05em; padding:3px 10px; border-radius:20px; margin-bottom:10px; }
+  .field { margin-top:14px; }
+  .label { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); display:flex; align-items:center; gap:8px; }
+  .val { margin-top:4px; white-space:pre-wrap; }
+  .val.title { font-size:18px; font-weight:700; }
+  .src { font-size:12px; color:var(--muted); margin-top:4px; font-style:italic; }
+  .email { margin-top:20px; border-top:1px dashed var(--line); padding-top:14px; }
+  .email h4 { margin:0 0 4px; font-size:15px; }
+  .note { font-size:13px; color:var(--muted); }
+  .img-note { background:#fff4f4; border-left:3px solid var(--red); padding:6px 10px; font-weight:700; font-size:13px; margin-top:10px; }
+  button.copy { font:600 11px/1 inherit; border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:5px; padding:4px 8px; cursor:pointer; text-transform:none; letter-spacing:0; }
+  button.copy:hover { border-color:var(--red); color:var(--red); }
+  button.copy.ok { background:var(--red); border-color:var(--red); color:#fff; }
+  .swatches { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:14px; }
+  .sw { background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .sw .chip { height:80px; }
+  .sw .meta { padding:10px 12px; }
+  .sw code { font-size:15px; font-weight:700; }
+  .logo-box { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+  .logo-box .ck { width:200px; height:200px; background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 0 0/20px 20px; border-radius:8px; }
+  .logo-box .dk { width:200px; height:200px; background:#111; border-radius:8px; }
+  dl { display:grid; grid-template-columns:max-content 1fr; gap:10px 18px; margin:0; }
+  dt { font-weight:700; }
+  dd { margin:0; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <img src="assets/logo-200x200.png" alt="HCI logo">
+  <div><h1>Human Concern International — Brand Kit</h1><p>Fundraise Up demo setup · humanconcern.org</p></div>
+</div></header>
+
+<main><div class="wrap">
+
+<section class="card guide">
+  <h2 style="margin-top:0">How to use this brand kit</h2>
+  <h3>Purpose</h3>
+  <p>Ready-made images and copy to build a Fundraise Up campaign for Human Concern International fast. Every image here is also in the <code>assets/</code> folder, ready to upload.</p>
+  <h3>What's inside</h3>
+  <ul>
+    <li>Logo (200×200, transparent)</li>
+    <li>Three campaign images, each with title + message copy</li>
+    <li>A matching thank-you email for each campaign</li>
+    <li>Brand colours</li>
+    <li>Organization & charity registration info</li>
+  </ul>
+  <h3>Sizing</h3>
+  <p>Campaign images (1248×702) fit a campaign modal <em>or</em> a full campaign page. The logo suits the donor portal and receipts. Everything is pre-sized — no cropping needed.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Log into your demo account's admin dashboard.</li>
+    <li>Find your campaign, or create one.</li>
+    <li>Pick one option below (image + title + message) and use it for the campaign modal/page <strong>and</strong> its thank-you email — same image throughout.</li>
+    <li>Apply the brand colours to the Donate Button element and email customization (and any other Elements).</li>
+    <li>Use the logo and org info for the donor portal and receipts.</li>
+  </ol>
+  <h3>Reminder</h3>
+  <p>Demos stay in test mode — no real charges are ever processed.</p>
+</section>
+
+<h2>Campaign options</h2>
+<p class="note">Each option is one complete package: image, message, and thank-you email. For every email, swap the subject line to <strong>"Thank you for your recurring support!"</strong> for recurring gifts — the rest of the email stays the same.</p>
+
+<!-- OPTION A -->
+<section class="card cta">
+  <span class="tag">OPTION A · FOOD AID</span>
+  <img src="assets/cta-1-1248x702.jpg" alt="Zero Hunger food aid appeal">
+  <div class="field"><div class="label">Title <button class="copy" data-t="a-title">Copy</button></div>
+    <div class="val title" id="a-title">Your Concern Can Put Food on Their Table</div></div>
+  <div class="field"><div class="label">Message <button class="copy" data-t="a-msg">Copy</button></div>
+    <div class="val" id="a-msg">Food security is fundamental to human dignity. Through monthly food programs and emergency distributions, HCI fights hunger on the frontlines, ensuring vulnerable communities have the nutrition they need to survive and thrive. Your compassion can restore dignity, provide nourishment, and deliver hope when it is needed most. Give today, and help a family facing hardship know where their next meal is coming from — delivered with the dignity every person deserves.</div>
+    <div class="src">Title verbatim from the site. Message: first three sentences verbatim; closing sentence written in HCI's voice.</div></div>
+
+  <div class="email">
+    <h4>Thank-you email</h4>
+    <div class="field"><div class="label">Subject <button class="copy" data-t="a-sub">Copy</button></div>
+      <div class="val" id="a-sub">Thank you for your gift!</div>
+      <div class="note">(recurring → "Thank you for your recurring support!")</div></div>
+    <div class="field"><div class="label">Content Title <button class="copy" data-t="a-ct">Copy</button></div>
+      <div class="val" id="a-ct">You just put food on a family's table</div></div>
+    <div class="img-note">IMAGE: USE CAMPAIGN IMAGE</div>
+    <div class="field"><div class="label">Content Text <button class="copy" data-t="a-body">Copy</button></div>
+      <div class="val" id="a-body">Hi {Supporter First Name – add tag},
+
+Thank you. Your generosity has turned concern into something real: nourishing food for a family that has been living with uncertainty about their next meal.
+
+Through our monthly food programs and emergency distributions, HCI teams on the frontlines deliver your support with care, reaching the families who need it most. Every food pack carries more than rice, flour, and oil — it carries dignity, and the reminder that someone, somewhere, is standing with them.
+
+For 46 years, donors like you have trusted us to deliver aid with dignity. We don't take that trust lightly, and we're honoured to count you among our family.
+
+With gratitude,
+The Human Concern International team
+
+P.S. "The example of those who spend their wealth in the way of Allah is like a seed that grows seven ears." May your gift multiply in blessings.</div></div>
+  </div>
+</section>
+
+<!-- OPTION B -->
+<section class="card cta">
+  <span class="tag">OPTION B · CLEAN WATER</span>
+  <img src="assets/cta-2-1248x702.jpg" alt="Clean Water today, Hope for tomorrow">
+  <div class="field"><div class="label">Title <button class="copy" data-t="b-title">Copy</button></div>
+    <div class="val title" id="b-title">Clean Water Today, Hope for Tomorrow</div></div>
+  <div class="field"><div class="label">Message <button class="copy" data-t="b-msg">Copy</button></div>
+    <div class="val" id="b-msg">Access to clean water and healthcare transforms lives. HCI's WASH (Water, Sanitation, and Hygiene) initiatives provide safe drinking water and hygiene education, while our health programs deliver crucial medical care and supplies to underserved communities. Your gift offers sustainable solutions that protect health and restore dignity — a well, a tap, a clean cup of water that keeps a child healthy and in school. Give today and bring hope for tomorrow.</div>
+    <div class="src">Title verbatim from the site's water banner. Message: first two sentences verbatim; remainder written in HCI's voice (partly drawn from the site's program list).</div></div>
+
+  <div class="email">
+    <h4>Thank-you email</h4>
+    <div class="field"><div class="label">Subject <button class="copy" data-t="b-sub">Copy</button></div>
+      <div class="val" id="b-sub">Thank you for your gift!</div>
+      <div class="note">(recurring → "Thank you for your recurring support!")</div></div>
+    <div class="field"><div class="label">Content Title <button class="copy" data-t="b-ct">Copy</button></div>
+      <div class="val" id="b-ct">You've brought clean water — and hope</div></div>
+    <div class="img-note">IMAGE: USE CAMPAIGN IMAGE</div>
+    <div class="field"><div class="label">Content Text <button class="copy" data-t="b-body">Copy</button></div>
+      <div class="val" id="b-body">Hi {Supporter First Name – add tag},
+
+Thank you for choosing to bring clean water to families who need it most.
+
+Your support powers HCI's WASH initiatives — safe drinking water, sanitation, and hygiene education that protect children from preventable illness and give mothers back hours once spent walking for water. It's one of the simplest gifts there is, and one of the most life-changing.
+
+Clean water today means healthier children, stronger communities, and hope for tomorrow. Because of you, that hope is flowing a little further.
+
+We're grateful to have you standing with us.
+
+With heartfelt thanks,
+The Human Concern International team</div></div>
+  </div>
+</section>
+
+<!-- OPTION C -->
+<section class="card cta">
+  <span class="tag">OPTION C · EDUCATION</span>
+  <img src="assets/cta-3-1248x702.jpg" alt="Children in a classroom">
+  <div class="field"><div class="label">Title <button class="copy" data-t="c-title">Copy</button></div>
+    <div class="val title" id="c-title">Education Empowers Brighter Futures</div></div>
+  <div class="field"><div class="label">Message <button class="copy" data-t="c-msg">Copy</button></div>
+    <div class="val" id="c-msg">Education empowers brighter futures. Through our Child Sponsorship Program, donors help children access schools, healthcare, nutritious food, and safe environments, offering hope and opportunity to the next generation. For 46 years, donors have trusted us to deliver aid with dignity. When you sponsor a child's learning, you give them more than a classroom — you give them the confidence to dream, and the tools to build a better future for their family.</div>
+    <div class="src">Title and first three sentences verbatim from the site; closing sentence written in HCI's voice.</div></div>
+
+  <div class="email">
+    <h4>Thank-you email</h4>
+    <div class="field"><div class="label">Subject <button class="copy" data-t="c-sub">Copy</button></div>
+      <div class="val" id="c-sub">Thank you for your gift!</div>
+      <div class="note">(recurring → "Thank you for your recurring support!")</div></div>
+    <div class="field"><div class="label">Content Title <button class="copy" data-t="c-ct">Copy</button></div>
+      <div class="val" id="c-ct">You're opening the classroom door</div></div>
+    <div class="img-note">IMAGE: USE CAMPAIGN IMAGE</div>
+    <div class="field"><div class="label">Content Text <button class="copy" data-t="c-body">Copy</button></div>
+      <div class="val" id="c-body">Hi {Supporter First Name – add tag},
+
+Thank you for investing in a child's future.
+
+Your generosity helps children access schools, healthcare, nutritious food, and safe environments — the foundations every young person needs to learn and grow. For a child who has known hardship, a seat in a classroom is so much more than lessons. It's a place of safety, a source of confidence, and the start of a brighter tomorrow.
+
+These are not statistics. They are children, each one with a name, a family, and a story that is changing because of you.
+
+Thank you for believing in them.
+
+With gratitude,
+The Human Concern International team</div></div>
+  </div>
+</section>
+
+<h2>Logo</h2>
+<div class="card logo-box">
+  <img class="ck" src="assets/logo-200x200.png" alt="Logo on transparent">
+  <img class="dk" src="assets/logo-200x200.png" alt="Logo on dark">
+  <p class="note" style="max-width:420px">HCI emblem, 200×200 PNG with transparent background (<code>assets/logo-200x200.png</code>). Taken from the site's header SVG; the full wordmark is white text, so the emblem alone works on both light and dark backgrounds.</p>
+</div>
+
+<h2>Brand colours</h2>
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:#e32226"></div><div class="meta"><code>#e32226</code> <button class="copy" data-v="#e32226">Copy</button><div class="note">Primary red · site buttons &amp; accents</div></div></div>
+  <div class="sw"><div class="chip" style="background:#fc0d0d"></div><div class="meta"><code>#fc0d0d</code> <button class="copy" data-v="#fc0d0d">Copy</button><div class="note">Logo red</div></div></div>
+  <div class="sw"><div class="chip" style="background:#000000"></div><div class="meta"><code>#000000</code> <button class="copy" data-v="#000000">Copy</button><div class="note">Header / banner dark</div></div></div>
+  <div class="sw"><div class="chip" style="background:#ffffff;border-bottom:1px solid #eee"></div><div class="meta"><code>#ffffff</code> <button class="copy" data-v="#ffffff">Copy</button><div class="note">Text on dark / button text</div></div></div>
+</div>
+
+<h2>Organization &amp; tax info — auto-detected from the site, verify before use</h2>
+<div class="card">
+  <dl>
+    <dt>Name</dt><dd><span id="o-name">Human Concern International</span> <button class="copy" data-t="o-name">Copy</button></dd>
+    <dt>Charity Reg. No.</dt><dd><span id="o-tax">107497125 RR 0001</span> <button class="copy" data-t="o-tax">Copy</button></dd>
+    <dt>Status</dt><dd>Registered charity with the Canada Revenue Agency (CRA) — Canadian charity, not a US 501(c)(3)</dd>
+    <dt>Address</dt><dd><span id="o-addr">877 Shefford Road, Unit 4, Ottawa, ON K1J 8H9</span> <button class="copy" data-t="o-addr">Copy</button></dd>
+  </dl>
+</div>
+
+</div></main>
+
+<script>
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('button.copy'); if (!b) return;
+  var text = b.dataset.v || document.getElementById(b.dataset.t).innerText.trim();
+  navigator.clipboard.writeText(text).then(function () {
+    var o = b.textContent; b.textContent = 'Copied!'; b.classList.add('ok');
+    setTimeout(function () { b.textContent = o; b.classList.remove('ok'); }, 1200);
+  });
+});
+</script>
+</body>
+</html>
