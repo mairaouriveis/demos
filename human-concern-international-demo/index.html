@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Concern International</title>
+
+<!-- Fundraise Up: the new standard for online giving -->
+<script>
+    (function (w, d, s, n, a) {
+        if (!w[n]) {
+            var l = 'call,catch,on,once,set,then,track,openCheckout'
+                .split(','), i, o = function (n) {
+                    return 'function' == typeof n ? o.l.push([arguments]) && o
+                        : function () { return o.l.push([n, arguments]) && o }
+                }, t = d.getElementsByTagName(s)[0],
+                j = d.createElement(s); j.async = !0; j.src = 'https://cdn.fundraiseup.com/widget/' + a + '';
+            t.parentNode.insertBefore(j, t); o.s = Date.now(); o.v = 5; o.h = w.location.href; o.l = [];
+            for (i = 0; i < 8; i++)o[l[i]] = o(l[i]); w[n] = o
+        }
+    })(window, document, 'script', 'FundraiseUp', 'ABPNEHGY');
+    window.fundraiseup_livemode = false;
+</script>
+<!-- End Fundraise Up -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --red:#E32226;
+    --red-dark:#8E1B1D;
+    --ink:#1A1A1A;
+    --black:#000;
+    --line:#00000012;
+    --cream:#FEFBF9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; font-family:'Inter',sans-serif; color:#000; background:#fff; line-height:1.5; font-size:15px;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 20px;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; background:var(--red); color:#fff; font-weight:600; border-radius:999px; padding:12px 24px; font-size:15px; cursor:pointer; border:0; transition:background .2s;}
+  .btn:hover{background:#c41b1f;}
+  .btn.sm{padding:9px 16px; font-size:13px; border-radius:6px;}
+  .btn.ghost{background:#fff; color:var(--red); border:1px solid var(--line);}
+  .btn.white{background:#fff; color:var(--ink); border-radius:6px; font-size:14px;}
+  .eyebrow{color:var(--red); font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.02em; margin:0 0 10px;}
+  h1,h2,h3{margin:0; color:var(--ink); font-weight:600;}
+  .section-title{font-size:38px; line-height:1.25; letter-spacing:-.01em;}
+
+  /* Header: floating dark pill */
+  .site-header{position:fixed; top:8px; left:0; right:0; z-index:50;}
+  .nav-pill{max-width:1060px; margin:0 auto; background:#131313; border-radius:22px; height:56px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:0 18px;}
+  .nav-pill ul{list-style:none; margin:0; padding:0; display:flex; align-items:center; gap:2px;}
+  .nav-pill .right{justify-content:flex-end;}
+  .nav-pill li a{white-space:nowrap; display:inline-flex; align-items:center; gap:6px; color:#fff; font-size:12px; font-weight:500; padding:7px 8px; border-radius:999px;}
+  .nav-pill li a.pill{background:var(--red);}
+  .nav-pill .caret{width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:4px solid #fff; margin-left:4px;}
+  .logo img{height:40px; width:auto;}
+
+  /* Hero */
+  .hero{position:relative; height:607px; background:#000 url('https://humanconcern.org/wp-content/uploads/2026/08/email-give-to-gaza.psd-1.webp') center/cover no-repeat; overflow:hidden;}
+  .hero-inner{position:relative; max-width:1060px; margin:0 auto; height:100%; padding:0 20px;}
+  .hero-headline{position:absolute; left:20px; top:120px; width:420px;}
+  .hero-cta{position:absolute; left:20px; top:300px;}
+  .hero-cta .btn{padding:12px 64px; font-size:15px;}
+  .hero-cards{position:absolute; left:20px; right:20px; top:372px; display:grid; grid-template-columns:repeat(6,1fr); gap:10px;}
+  .hero-card{background:#fff; border-radius:40px; height:84px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; font-size:12px; font-weight:600; color:var(--ink); box-shadow:0 2px 12px #0000000d; transition:transform .2s;}
+  .hero-card:hover{transform:translateY(-3px);}
+  .hero-card img{height:34px; width:auto;}
+
+  /* Stay in touch bar (visual only) */
+  .touch-bar{background:#000; height:104px; display:flex; align-items:center; justify-content:center; gap:22px;}
+  .touch-bar strong{color:var(--red); font-size:20px; font-weight:700; letter-spacing:.01em;}
+  .touch-bar input{width:165px; height:34px; border:0; padding:0 8px; font-family:inherit; font-size:12px;}
+
+  /* Urgent needs */
+  .urgent{padding:80px 0 60px;}
+  .urgent .head{text-align:center; margin-bottom:28px;}
+  .urgent .section-title{font-size:38px;}
+  .need{display:grid; grid-template-columns:405px 1fr; gap:16px; border:1px solid #0000001a; border-radius:16px; padding:14px; margin-bottom:12px; background:#fff;}
+  .need .thumb{border-radius:10px; overflow:hidden; height:180px;}
+  .need .thumb img{width:100%; height:100%; object-fit:cover;}
+  .need .body{padding:10px 8px 6px;}
+  .need .top{display:flex; justify-content:space-between; align-items:center;}
+  .need h3{font-size:18px;}
+  .need .icons{display:flex; gap:8px; align-items:center;}
+  .need .icons img{height:40px; width:auto;}
+  .need p{font-size:13px; color:#222; margin:18px 0 16px; max-width:600px;}
+  .need .actions{display:flex; gap:8px;}
+
+  /* Food on table */
+  .food{padding:40px 0 60px;}
+  .food .grid{display:grid; grid-template-columns:1.25fr 1fr; gap:40px; align-items:center;}
+  .food p{font-size:14px; color:#222; margin:0 0 14px;}
+  .food .photo img{width:215px; height:375px; object-fit:cover; border-radius:28px; margin-left:0;}
+
+  /* Giving helps */
+  .helps{background:var(--cream); padding:70px 0;}
+  .helps .head{text-align:center; margin-bottom:34px;}
+  .helps .head p{font-size:14px; margin:14px 0 0;}
+  .help-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px;}
+  .help{background:#fff; border:1px solid #0000000f; border-radius:14px; padding:18px 18px 22px;}
+  .help .ic{width:44px; height:44px; border-radius:50%; background:var(--red); display:flex; align-items:center; justify-content:center; margin-bottom:12px;}
+  .help h3{font-size:14px; margin-bottom:6px;}
+  .help p{margin:0; font-size:13px; color:#333;}
+  .help-cta{text-align:center; margin-top:30px;}
+
+  /* Empowering change */
+  .trust{padding:80px 0;}
+  .trust .grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .trust .photo{border-radius:20px; overflow:hidden; height:420px;}
+  .trust .photo img{width:100%; height:100%; object-fit:cover;}
+  .trust ul{padding-left:20px; margin:18px 0; font-size:14px;}
+  .trust li{margin:4px 0;}
+  .trust mark{background:var(--red); color:#fff; padding:1px 5px; border-radius:3px;}
+  .trust p{font-size:14px;}
+
+  /* Give with purpose */
+  .purpose{background:var(--red-dark) url('https://humanconcern.org/wp-content/uploads/2026/01/Background.webp') center/cover no-repeat; color:#fff; text-align:center; padding:62px 20px 66px;}
+  .purpose h2{color:#fff; font-size:32px; margin-bottom:14px;}
+  .purpose p{max-width:800px; margin:0 auto 12px; font-size:14px;}
+  .purpose .verse{font-style:italic;}
+
+  /* Gallery */
+  .gallery{display:grid; grid-template-columns:repeat(6,1fr);}
+  .gallery img{width:100%; height:165px; object-fit:cover;}
+
+  /* Footer */
+  footer{background:#000; color:#fff; padding:50px 0 24px; font-size:12px;}
+  footer .grid{display:grid; grid-template-columns:1.5fr 1fr; gap:40px;}
+  footer .logo img{height:54px; margin-bottom:14px;}
+  .socials{display:flex; gap:8px; margin-bottom:14px;}
+  .socials span{width:22px; height:22px; border-radius:50%; background:var(--red); display:inline-flex; align-items:center; justify-content:center; font-size:10px; font-weight:700;}
+  footer p{margin:0 0 8px; color:#ddd;}
+  .acc{border:1px solid #333; border-radius:4px; padding:10px 12px; margin-bottom:10px; display:flex; justify-content:space-between;}
+  .copy{border-top:1px solid #222; margin-top:30px; padding-top:18px; color:#aaa; text-align:center;}
+
+  @media (max-width:900px){
+    .nav-pill{grid-template-columns:1fr; height:auto; padding:10px; gap:8px; border-radius:14px;}
+    .nav-pill ul{flex-wrap:wrap; justify-content:center!important;}
+    .logo{justify-self:center;}
+    .hero{height:auto;}
+    .hero-inner{padding:160px 20px 30px;}
+    .hero-headline,.hero-cta,.hero-cards{position:static; margin-bottom:16px;}
+    .hero-cards{grid-template-columns:repeat(2,1fr);}
+    .need,.food .grid,.trust .grid,footer .grid{grid-template-columns:1fr;}
+    .help-grid{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(3,1fr);}
+    .touch-bar{flex-direction:column; height:auto; padding:20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-pill">
+    <ul class="left">
+      <li><a class="pill" href="#">AutoAjr</a></li>
+      <li><a href="#">About Us<span class="caret"></span></a></li>
+      <li><a href="#">Emergency Appeals<span class="caret"></span></a></li>
+      <li><a href="#">Campaigns<span class="caret"></span></a></li>
+      <li><a href="#">News</a></li>
+    </ul>
+    <a class="logo" href="index.html" aria-label="Human Concern International home">
+      <img src="https://humanconcern.org/wp-content/uploads/2024/06/Asset-2.svg" alt="Human Concern International">
+    </a>
+    <ul class="right">
+      <li><a href="#">Zakat Calculator</a></li>
+      <li><a href="#">Get Involved<span class="caret"></span></a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Contact</a></li>
+      <!-- Main donate CTA. Replace with a Fundraise Up Donate Button element snippet if provided. -->
+      <li><a class="pill fru-donate" href="#donate">Donate Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-headline" src="https://humanconcern.org/wp-content/uploads/2026/08/email-give-to-gaza.psd-1-01.webp" alt="Sadaqah Jariyah — Educate a child">
+    <div class="hero-cta"><a class="btn fru-donate" href="#donate">Donate Now</a></div>
+    <div class="hero-cards">
+      <a class="hero-card fru-donate" href="#donate"><img src="https://humanconcern.org/wp-content/uploads/2024/06/zakat-4.webp" alt="">Zakat</a>
+      <a class="hero-card fru-donate" href="#donate"><img src="https://humanconcern.org/wp-content/uploads/2024/06/food-7.webp" alt="">Food Aid</a>
+      <a class="hero-card fru-donate" href="#donate"><img src="https://humanconcern.org/wp-content/uploads/2024/06/wash-9.webp" alt="">Water Aid</a>
+      <a class="hero-card fru-donate" href="#donate"><img src="https://humanconcern.org/wp-content/uploads/2024/06/CSP-6.webp" alt="">Child Sponsorship</a>
+      <a class="hero-card fru-donate" href="#donate"><img src="https://humanconcern.org/wp-content/uploads/2024/06/education.png" alt="">Education</a>
+      <a class="hero-card fru-donate" href="#donate"><img src="https://humanconcern.org/wp-content/uploads/2025/08/flood-relief-2.webp" alt="">Flood Relief</a>
+    </div>
+  </div>
+</section>
+
+<div class="touch-bar">
+  <strong>STAY IN TOUCH</strong>
+  <input type="email" placeholder="Email" aria-label="Email">
+  <span class="btn sm">Subscribe to our Emails</span>
+</div>
+
+<section class="urgent">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Change the World: Urgent Needs</p>
+      <h1 class="section-title">Changing Lives Through Compassion:<br>Human Concern International</h1>
+    </div>
+
+    <div class="need">
+      <div class="thumb"><img src="https://humanconcern.org/wp-content/uploads/2024/06/Food-Aid-New.webp" alt="Food Aid appeal"></div>
+      <div class="body">
+        <div class="top"><h3>Food Aid</h3>
+          <div class="icons"><img src="https://humanconcern.org/wp-content/uploads/2024/06/food-7.webp" alt=""><img src="https://humanconcern.org/wp-content/uploads/2025/02/Zakat-Eligible-Stamp.svg" alt="Zakat eligible"></div></div>
+        <p>Having enough to eat is at the heart of a dignified life. With recurring monthly food support and rapid emergency distributions, HCI works on the front lines of hunger so struggling families get the nourishment they need.</p>
+        <div class="actions"><a class="btn sm fru-donate" href="#donate">Donate Now</a><a class="btn sm ghost" href="#">Learn More</a></div>
+      </div>
+    </div>
+
+    <div class="need">
+      <div class="thumb"><img src="https://humanconcern.org/wp-content/uploads/2025/02/WASH.webp" alt="Water Aid appeal"></div>
+      <div class="body">
+        <div class="top"><h3>Water Aid</h3>
+          <div class="icons"><img src="https://humanconcern.org/wp-content/uploads/2024/06/wash-9.webp" alt=""></div></div>
+        <p>Clean water and basic healthcare change everything. Through its WASH (Water, Sanitation and Hygiene) work, HCI delivers safe drinking water and hygiene training, alongside medical care and supplies for communities that lack them.</p>
+        <div class="actions"><a class="btn sm fru-donate" href="#donate">Donate Now</a><a class="btn sm ghost" href="#">Learn More</a></div>
+      </div>
+    </div>
+
+    <div class="need">
+      <div class="thumb"><img src="https://humanconcern.org/wp-content/uploads/2024/06/CSP-scaled.webp" alt="Child Sponsorship appeal"></div>
+      <div class="body">
+        <div class="top"><h3>Child Sponsorship</h3>
+          <div class="icons"><img src="https://humanconcern.org/wp-content/uploads/2024/06/CSP-6.webp" alt=""><img src="https://humanconcern.org/wp-content/uploads/2025/02/Zakat-Eligible-Stamp.svg" alt="Zakat eligible"></div></div>
+        <p>A sponsor opens doors. The Child Sponsorship Program connects donors with children so they can attend school, see a doctor, eat well and grow up somewhere safe — giving the next generation real hope.</p>
+        <div class="actions"><a class="btn sm fru-donate" href="#donate">Sponsor a Child</a><a class="btn sm ghost" href="#">Learn More</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="food">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Save lives</p>
+      <h2 class="section-title" style="margin-bottom:18px">Your Concern Can Put Food on Their Table</h2>
+      <p>Compassion is a reminder that we belong to one another. Most of us never wonder where our next meal will come from, yet millions of families around the world face that question every day.</p>
+      <p>Letting empathy lead means turning our own blessings into support for others — restoring dignity, providing nourishment, and offering hope to households going through hardship.</p>
+      <p><strong>Your kindness can bring food, dignity and hope exactly when it matters most.</strong></p>
+      <a class="btn fru-donate" href="#donate" style="margin-top:6px">Give your Zakat. Feed a family</a>
+    </div>
+    <div class="photo"><img src="https://humanconcern.org/wp-content/uploads/2024/07/HCI.webp" alt="Family receiving support"></div>
+  </div>
+</section>
+
+<section class="helps">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="section-title">How Your Giving Helps</h2>
+      <p>Your gifts power life-saving programs, including:</p>
+    </div>
+    <div class="help-grid">
+      <div class="help"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 11h18M5 11v8h14v-8M8 7h8l2 4H6z"/></svg></div><h3>Food Assistance Programs</h3><p>Nutritious meals for families living with hunger and food insecurity.</p></div>
+      <div class="help"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Zakat Distribution</h3><p>Carefully given to eligible recipients so your Zakat reaches those in greatest need.</p></div>
+      <div class="help"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3l9 17H3z M12 10v4 M12 17h.01"/></svg></div><h3>Emergency Relief</h3><p>Fast delivery of food, water, shelter and medical aid wherever crisis strikes.</p></div>
+      <div class="help"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="7" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg></div><h3>Orphan &amp; Child Sponsorship</h3><p>Education, healthcare and stability for vulnerable children.</p></div>
+      <div class="help"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div><h3>Clean Water &amp; Healthcare</h3><p>Lasting solutions that protect health and restore dignity.</p></div>
+      <div class="help" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;background:var(--red);border-color:var(--red)"><h3 style="color:#fff;font-size:18px">Give monthly, change lives all year</h3><a class="btn white fru-donate" href="#donate">Become a Sustainer</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap grid">
+    <div class="photo"><img src="https://humanconcern.org/wp-content/uploads/2024/07/6.webp" alt="HCI field work"></div>
+    <div>
+      <p class="eyebrow">Empowering Change Globally</p>
+      <h2 class="section-title">For 46 years, donors have trusted us to deliver aid with dignity</h2>
+      <ul>
+        <li><mark>46 years</mark> of humanitarian service</li>
+        <li>Operating <mark>in 16 countries</mark> worldwide</li>
+        <li>Committed to transparency, accountability, and impact</li>
+      </ul>
+      <p>Aid is only part of it — we walk alongside communities through their hardest moments.</p>
+    </div>
+  </div>
+</section>
+
+<section class="purpose">
+  <h2>Give With Purpose</h2>
+  <p>Your gift can feed the hungry, shelter the displaced and ease the burden of families fighting to survive.</p>
+  <p><strong>Allah calls us to give with trust and sincerity:</strong></p>
+  <p class="verse">“The example of those who spend their wealth in the way of Allah is like a seed that grows seven ears; in every ear is a hundred grains.”<br><span style="font-style:normal">(Qur’an 2:261)</span></p>
+  <a class="btn white fru-donate" href="#donate" style="margin-top:12px">Make a difference today</a>
+</section>
+
+<div class="gallery">
+  <img src="https://humanconcern.org/wp-content/uploads/elementor/thumbs/Syria-Village-2023-photos-Medium-3-rfbrzfeaj9nf9scn8gxh52277lp2hpy4loz95jzk0k.webp" alt="">
+  <img src="https://humanconcern.org/wp-content/uploads/elementor/thumbs/Syria-Village-2023-photos-Medium-4-rfbrzfeaj9nf9scn8gxh52277lp2hpy4loz95jzk0k.webp" alt="">
+  <img src="https://humanconcern.org/wp-content/uploads/elementor/thumbs/water-4-Medium-e1720458527511-rfbrzfeaj9nf9scn8gxh52277lp2hpy4loz95jzk0k.webp" alt="">
+  <img src="https://humanconcern.org/wp-content/uploads/elementor/thumbs/Kenya-field-2024-Medium-rfbrzfeaj9nf9scn8gxh52277lp2hpy4loz95jzk0k.webp" alt="">
+  <img src="https://humanconcern.org/wp-content/uploads/elementor/thumbs/csp-gaza-Medium-e1720458499221-rfbrzfeaj9nf9scn8gxh52277lp2hpy4loz95jzk0k.webp" alt="">
+  <img src="https://humanconcern.org/wp-content/uploads/elementor/thumbs/dustribution-Medium-rfbrzfeaj9nf9scn8gxh52277lp2hpy4loz95jzk0k.webp" alt="">
+</div>
+
+<footer>
+  <div class="wrap grid">
+    <div>
+      <a class="logo" href="index.html"><img src="https://humanconcern.org/wp-content/uploads/2024/06/Asset-2.svg" alt="Human Concern International"></a>
+      <div class="socials"><span>f</span><span>ig</span><span>in</span><span>X</span><span>tt</span><span>yt</span></div>
+      <p>Canada's longest-serving Muslim relief organization, working to end poverty for more than four decades. Registered charity with the CRA — Charitable Registration No. 107497125 RR 0001.</p>
+      <p>1-800-587-6424 · 877 Shefford Road, Unit 4, Ottawa, ON K1J 8H9</p>
+    </div>
+    <div>
+      <div class="acc">Islamic Resources <span>+</span></div>
+      <div class="acc">Policies <span>+</span></div>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 HCI | All Rights Reserved · Fundraise Up demo (test mode)</div>
+</footer>
+
+<script>
+  // Every donate CTA opens the Fundraise Up checkout (test mode).
+  document.querySelectorAll('.fru-donate').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.FundraiseUp && window.FundraiseUp.openCheckout();
+    });
+  });
+</script>
+</body>
+</html>
